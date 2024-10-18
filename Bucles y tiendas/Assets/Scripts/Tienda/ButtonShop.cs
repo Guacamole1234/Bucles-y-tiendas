@@ -14,17 +14,20 @@ public class ButtonShop : MonoBehaviour
     string nameItem = "Objeto";
     [SerializeField]
     float priceItem;
+    [SerializeField]
+    string[] posiblesNombres;
     // Start is called before the first frame update
     void Start()
     {
+        nameItem = posiblesNombres[Random.Range(0, posiblesNombres.Length)];
         textButton = transform.GetChild(0).GetComponent<TextMeshProUGUI>(); /* @ */
         priceItem = Random.Range(25f, 350f);
-        textButton.text = priceItem.ToString() + " €";
+        textButton.text = nameItem + "\n" + priceItem.ToString() + " €";
     }
 
     public void ClickEnBotonDeTienda ()
     {
-        myWallet.RestarSaldo(priceItem);
+        myWallet.InformarSaldo(nameItem, priceItem);
     }
 
     // Update is called once per frame

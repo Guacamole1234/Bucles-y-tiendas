@@ -571,9 +571,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b480d4c0d31d84dbc74aa9e8dde288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWallet: {fileID: 0}
+  myWallet: {fileID: 1201984054}
   nameItem: Arenas Temporales
   priceItem: 0
+  posiblesNombres:
+  - Arenas Temporales
+  - Arenisca del Vuelo Bronce
+  - Arcilla moldeadora
+  - Acero Vivo
+  - Elementium Atemporal Endurecido
+  - Dudas incesantes
 --- !u!1 &499568947
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +726,7 @@ GameObject:
   - component: {fileID: 615437595}
   - component: {fileID: 615437597}
   - component: {fileID: 615437596}
+  - component: {fileID: 615437598}
   m_Layer: 5
   m_Name: Saldo
   m_TagString: Untagged
@@ -742,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -153.5138, y: -63.8398}
+  m_SizeDelta: {x: 307.0277, y: 77.6795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615437596
 MonoBehaviour:
@@ -792,7 +800,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 69.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -842,6 +850,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615437594}
   m_CullTransparentMesh: 1
+--- !u!114 &615437598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615437594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfaa61a494479794aa6a63d0644b19eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saldo: 0
+  guacamoleSaldo: {fileID: 615437596}
+  confirmarCompra: {fileID: 2108650999}
+  noSaldo: {fileID: 30769537}
+  guacamoleConfirma: {fileID: 0}
 --- !u!1 &647859750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,9 +1566,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b480d4c0d31d84dbc74aa9e8dde288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWallet: {fileID: 0}
+  myWallet: {fileID: 1201984054}
   nameItem: "Tarta de caf\xE9"
   priceItem: 0
+  posiblesNombres:
+  - "Tarta de caf\xE9"
+  - 02-B
+  - Humanidad de Pansito
+  - '"Carlos Dos Brazos"'
+  - "Napolitana de caf\xE9"
+  - "Postre de caf\xE9 incierto"
 --- !u!1 &1201984053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1609,7 @@ MonoBehaviour:
   guacamoleSaldo: {fileID: 615437596}
   confirmarCompra: {fileID: 2108650999}
   noSaldo: {fileID: 30769537}
+  guacamoleConfirma: {fileID: 1867118479}
 --- !u!4 &1201984055
 Transform:
   m_ObjectHideFlags: 0
@@ -1806,9 +1839,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b480d4c0d31d84dbc74aa9e8dde288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWallet: {fileID: 0}
+  myWallet: {fileID: 1201984054}
   nameItem: "Caf\xE9"
   priceItem: 0
+  posiblesNombres:
+  - "Caf\xE9"
+  - "Caf\xE9 blanco de Un'Goro"
+  - "Caf\xE9 quemado de Tanaris"
+  - "Caf\xE9 elfico de Vallefresno"
+  - "Caf\xE9 ambar de Colinas Pardas"
+  - "Caf\xE9 con licor de caf\xE9"
 --- !u!1 &1378413207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: YES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1893,10 +1933,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 50.55
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2025,7 +2065,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1412312555}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1201984054}
+        m_TargetAssemblyTypeName: Wallet, Assembly-CSharp
+        m_MethodName: ConfirmarCompra
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1412312555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2210,9 +2262,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b480d4c0d31d84dbc74aa9e8dde288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWallet: {fileID: 0}
+  myWallet: {fileID: 1201984054}
   nameItem: "Bast\xF3n del Infinito"
   priceItem: 0
+  posiblesNombres:
+  - "Bast\xF3n del infinito"
+  - Togas del Gnomo Loco
+  - Gafas indiscretas
+  - "Palito para remover el caf\xE9"
+  - "Sue\xF1os y esperanzas"
+  - "Aceita para l\xE1mparas perpetuas"
 --- !u!1 &1459974770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +2284,6 @@ GameObject:
   - component: {fileID: 1459974773}
   - component: {fileID: 1459974772}
   - component: {fileID: 1459974771}
-  - component: {fileID: 1459974775}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2318,22 +2376,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1459974775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459974770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfaa61a494479794aa6a63d0644b19eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saldo: 0
-  guacamoleSaldo: {fileID: 615437596}
-  confirmarCompra: {fileID: 0}
-  noSaldo: {fileID: 0}
 --- !u!1 &1569485955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,7 +2433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: NO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2418,10 +2460,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 66.65
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2880,7 +2922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868387624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2108650999}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1868387624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3001,7 +3055,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1877601615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 30769537}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1877601615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,8 +3290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.652, y: 0}
+  m_SizeDelta: {x: -11.737, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076084481
 MonoBehaviour:
@@ -3247,7 +3313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Ja,ja pinche pobre
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3274,10 +3340,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 18.05
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class Wallet : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class Wallet : MonoBehaviour
     GameObject confirmarCompra;
     [SerializeField]
     GameObject noSaldo;
+    [SerializeField]
+    TextMeshProUGUI guacamoleConfirma;
+    float precioObjetoQueCompro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +25,31 @@ public class Wallet : MonoBehaviour
         guacamoleSaldo.text = saldo.ToString("000.00") + " €";
     }
 
-    public void RestarSaldo(float precio)
+    public void InformarSaldo(string nameITem, float precio)
     {
         if ( saldo > precio )
         {
-            saldo -= precio;
-            guacamoleSaldo.text = saldo.ToString("000.00") + " €";
+            guacamoleConfirma.text = "¿Quieres comprar " + nameITem + "por " + precio + " €";
+            confirmarCompra.SetActive(true);
+            precioObjetoQueCompro = precio;
         }
         else
         {
+            noSaldo.SetActive(true);
+        }   
+    }
+
+    public void ConfirmarCompra ()
+    {
+        if (saldo > precioObjetoQueCompro)
+        {
+            saldo = saldo - precioObjetoQueCompro;
+            guacamoleSaldo.text = saldo.ToString("000.00") + " €";
+            confirmarCompra.SetActive(false);
+        }
+        else
+        {
+            confirmarCompra.SetActive(false);
             noSaldo.SetActive(true);
         }
     }
